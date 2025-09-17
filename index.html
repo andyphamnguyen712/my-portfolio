@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Portfolio</title>
+    <style>
+      :root{ --accent:#0b7285; --muted:#6c757d; --bg:#f8f9fa }
+      body{ font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; color:#222; background:var(--bg) }
+      header{ background:white; box-shadow:0 2px 6px rgba(0,0,0,.05); position:sticky; top:0; z-index:20 }
+      .container{ max-width:1000px; margin:0 auto; padding:1rem }
+      nav{ display:flex; align-items:center; justify-content:space-between }
+      .brand{ font-weight:700; color:var(--accent) }
+      .nav-links{ display:flex; gap:1rem }
+      .nav-links a{ color:var(--muted); text-decoration:none; font-weight:600 }
+      .hero{ background:linear-gradient(180deg, rgba(11,114,133,.06), transparent); padding:4rem 0 }
+      .hero h1{ margin:0 0 .5rem; font-size:2rem }
+      .hero p{ margin:0; color:var(--muted) }
+      section{ background:white; margin:1.25rem 0; padding:1.25rem; border-radius:8px }
+      .skills-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:.75rem }
+      .skill{ padding:.5rem; border:1px solid #e9ecef; border-radius:6px; background:#fff }
+      footer{ text-align:center; padding:1rem 0; color:var(--muted); font-size:.9rem }
+      @media (min-width:800px){ .hero h1{ font-size:2.5rem } }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <div class="brand">Andy Pham-Nguyen</div>
+          <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+            <a href="resume.html">Resume</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section id="home" class="hero">
+        <h1>Welcome — glad you're here!</h1>
+        <p>I'm a data science enthusiast building projects that turn data into insight.</p>
+      </section>
+
+      <section id="about">
+        <h2>About Me</h2>
+        <p>
+          I'm a data-focused problem solver with experience in cleaning, analyzing, and visualizing data. I enjoy building models and dashboards that help teams make informed decisions.
+        </p>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+          <div class="skill"><strong>Python</strong><div style="color:var(--muted);font-size:.95rem">Pandas, NumPy, scikit-learn</div></div>
+          <div class="skill"><strong>Data Visualization</strong><div style="color:var(--muted);font-size:.95rem">Matplotlib, Seaborn, Plotly</div></div>
+          <div class="skill"><strong>Machine Learning</strong><div style="color:var(--muted);font-size:.95rem">Regression, Classification, Model Evaluation</div></div>
+          <div class="skill"><strong>Deep Learning</strong><div style="color:var(--muted);font-size:.95rem">TensorFlow / PyTorch basics</div></div>
+          <div class="skill"><strong>Data Wrangling</strong><div style="color:var(--muted);font-size:.95rem">ETL, SQL, feature engineering</div></div>
+          <div class="skill"><strong>Cloud & Tools</strong><div style="color:var(--muted);font-size:.95rem">Git, Docker, AWS/GCP (basic)</div></div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p style="color:var(--muted)">Replace this with your email or a contact form.</p>
+      </section>
+    </main>
+
+    <footer>
+  <div class="container">© <span id="year"></span> Andy Pham-Nguyen — Data Science Portfolio</div>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
